@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body style="background-color:#e3f2fd;">
+<nav class="navbar navbar-light" style="background-color: #DCDCDC;">
+    <a class="navbar-brand" href="#">Lickity Split!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Features</a>
+            <a class="nav-item nav-link" href="#">Pricing</a>
+            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+    </div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JSt
+        QIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO
+        2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-Jj
+        SmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<br>
+<h1><center>Lickity Split!</center></h1>
+<hr size="3">
+<h6><center>With so many restaurants to choose from, let us do the choosing. Just fill out your preferences
+below and we will find you a place to go, lickity split!</center></h6>
+<hr size="2">
+<p><center>*You must provide a response for location, price and if you are looking to go right now*</center></p>
+<center><button class = "loc" onclick="getlocation()">Click to Enable Current Location</button></center>
+<p id="demo1"></p>
+<script>
+        var variable1 = document.getElementById("demo1");
+        function getlocation(){
+                navigator.geolocation.getCurrentPosition(showLoc);
+        }
+        function showLoc(pos){
+                variable1.innerHTML = "Location: [" + pos.coords.latitude +
+                ", " + pos.coords.longitude + "]";
+            }
+</script>
+<form action="#" method="post">
+    <p><center>Enter a location or copy and paste current location</center></p>
+    <p><center><input type="text" name="location"/></center></p>
+    <p><center>Enter any keywords or ideas that you have, otherwise leave this blank</center></p>
+    <p><center><input type="text" name="term"/></center></p>
+    <p><center>Enter price range (1, 2, 3, or 4. 1 being least expensive and 4 being most expensive
+    Or combine multiple ranges. Ex. 1, 2, 3, 4 includes all ranges)</center></p>
+    <p><center><input type="text" name="price"/></center></p>
+    <p><center>Are you looking to go right now? (Yes or No)</center></p>
+    <p><center><input type="text" name="open"/></center></p>
+    <p><center><input type="submit" value="Let's Go!"/></center></p>
+</form>
+</body>
+</html>
