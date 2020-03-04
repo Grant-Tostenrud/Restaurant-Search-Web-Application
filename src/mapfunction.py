@@ -13,5 +13,5 @@ def mapfunction(lat_long):
     # add markers
     fig.add_layer(markers)
     # export to html
-    embed_minimal_html('/templates/rmap.html', views=[fig])
+    embed_minimal_html('rmap.html', views=[fig])
     # /Applications/RestaurantAventure/templates
