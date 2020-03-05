@@ -13,5 +13,5 @@ def mapfunction(lat_long):
     markers = gmaps.marker_layer(marker_locations)
     # add markers
     fig.add_layer(markers)
-    # export to html
+    # export to html 
     embed_minimal_html('/Users/granttostenrud/Desktop/RestaurantAventure/templates/rmap.html', views=[fig])
