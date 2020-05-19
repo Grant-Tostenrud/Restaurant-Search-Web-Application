@@ -7,8 +7,6 @@ from random import randint
 
 def search(location, termval: object, priceval: object, opennow: object) -> object:
     # get API key
-    API_KEY = 'DX12YoxM4wxoZcRXkxF4jiYscuhM5ibJuixL1zqDZ5sxORA3WnO2xf7-4fd6hwaAJHG3xsuFfnPlAp3Rssq6DLKc585' \
-              '-OcyGasAjlhbXjnuhR-kV0RkY36_SmRlPXnYx '
     # define endpoint and header
     endpoint = 'https://api.yelp.com/v3/businesses/search'
     headers = {
